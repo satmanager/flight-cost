@@ -1,0 +1,188 @@
+/* General reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f0f2f5; /* Light grey background for the whole page */
+}
+
+.App {
+  text-align: center;
+}
+
+/* --- HEADER STYLES (Made smaller) --- */
+.App-header {
+  background-color: #282c34;
+  padding: 15px 20px; /* Reduced padding */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Removed min-height: 100vh to stop it from taking whole screen */
+}
+
+.App-header h1 {
+  font-size: 1.5rem; /* Much smaller title (was likely 2rem+) */
+  margin: 0;
+}
+
+.App-header p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* --- CONTAINER (Moves form up and centers it) --- */
+.container {
+  max-width: 500px;
+  margin: 30px auto; /* Adds space from header, centers horizontally */
+  padding: 30px;
+  background-color: white; /* White card background */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Nice shadow to make it pop */
+}
+
+/* --- FORM STYLES (Made bigger/clearer) --- */
+.flight-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form elements */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input {
+  padding: 12px 15px; /* Larger typing area */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* --- BUTTONS --- */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.search-btn {
+  flex: 2;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}
+
+.search-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.clear-btn {
+  flex: 1;
+  padding: 14px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.clear-btn:hover {
+  background-color: #5a6268;
+}
+
+/* --- RESULTS CARD --- */
+.result-card {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e6fffa; /* Light green tint */
+  border: 1px solid #b2f5ea;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.result-card h2 {
+  margin-top: 0;
+  color: #2c7a7b;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #b2f5ea;
+  padding-bottom: 10px;
+}
+
+.result-details p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.highlight {
+  color: #2f855a;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed #b2f5ea;
+}
+
+.error-msg {
+  background-color: #fff5f5;
+  color: #c53030;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #feb2b2;
+  margin-top: 20px;
+}
+
+/* --- LOADING SPINNER --- */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1); /* Light grey ring */
+  border-left-color: #007bff; /* Blue spinning part */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
