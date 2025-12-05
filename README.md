@@ -64,7 +64,7 @@ PART 2: FRONTEND SETUP (React)
 2. Install Dependencies
    $ npm install
 
-3. (Optional) Configure Environment
+3. Configure Environment
    If you change the backend port, create a `.env` file in the 'frontend' 
    folder:
    
